@@ -2,11 +2,6 @@
  the Express and Socket.io libraries to create a real-time 
  WebRTC video chat application. */
 
-
- /**
- * These lines import the Express and uuid libraries, 
- * and create an instance of the Express application and an HTTP server.
- */
 const express = require("express");
 const app = express();
 const server = require("http").Server(app);
@@ -90,5 +85,7 @@ io.on("connection", (socket) => {
 /**This line starts the server and 
  * listens on the port specified in the 
  * PORT environment variable or port 3030 if it is not set. */
-server.listen(process.env.PORT || 3030);
+server.listen(3000, ()=>{
+    console.log("listening on port 3000");
+});
 
